@@ -2,10 +2,7 @@
 
 def reverse_each_word(string)
   array = []
-  (0..7).collect { |string| }
-  #word = string.split(" ")
-  #use collect instead of split on line 5, i guess? why? how? collect isn't very clear. how do i call on the array that collect makes???
-  word.each do |word|
+  word = string.split(" ").collect do |word|
     counter = word.length
     new_word = ''
     while counter > 0 do
