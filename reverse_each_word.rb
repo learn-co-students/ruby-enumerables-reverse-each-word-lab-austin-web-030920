@@ -2,8 +2,16 @@
 
 def reverse_each_word(string)
   array = []
-  array << string
- # reverse letters of each word. counter? idk
-  #reverse array
-  return array
+  word = string.split(" ")
+  #use collect instead of split on line 5, i guess? why? how? collect isn't very clear.
+  word.each do |word|
+    counter = word.length
+    new_word = ''
+    while counter > 0 do
+      counter -= 1
+      new_word += word[counter]
+    end
+    array << new_word
+  end
+  array.join(" ")
 end
